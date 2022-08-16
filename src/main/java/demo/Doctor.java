@@ -3,7 +3,13 @@ package demo;
 //the two classes since they are implementing the Staff class will be injected
 public class Doctor implements Staff {
     private  String qualification;
-    private  Nurse nurse;
+    public Doctor(String qualification) {
+        this.qualification = qualification;
+    }
+
+    public void assist(){
+        System.out.println("Doctor is assisting");
+    }
 
     public String getQualification() {
         return qualification;
@@ -13,7 +19,4 @@ public class Doctor implements Staff {
         this.qualification = qualification;
     }
 
-    public void assist(){
-        System.out.println("Doctor is assisting");
-    }
 }

@@ -80,10 +80,10 @@ Dependency Injection through XML.
 //        staff.assist();
 ```
 
+**Injecting a class property to bean**
 ```aidl
 
 We can as well inject the properties of a class to a Bean.
-
 
 <bean id="doctor" class="demo.Doctor">
       <property name="qualification" value="MBBS">
@@ -91,4 +91,32 @@ We can as well inject the properties of a class to a Bean.
  </bean>
  
  
+```
+
+**Injecting an Object through the ref keyword**
+```aidl
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+   <bean id="doctor" class="demo.Doctor">
+      <property name="qualification" value="MBBS">
+      </property>
+      <property name="nurse" ref="nurse"></property>
+   </bean>
+
+   <bean id="nurse" class="demo.Nurse"></bean>
+
+</beans>
+```
+
+**Constructor Bean Injection**
+
+```aidl
+<bean id="doctor" class="demo.Doctor">
+
+  <constructor-arg value="Electronic and Computer Engineering"></constructor-arg>
+</bean>
 ```
