@@ -5,11 +5,12 @@
        xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
     http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
-   <bean id="doctor" class="demo.Doctor">
+    <context:component-scan base-package="demo"></context:component-scan>
+<!--   <bean id="doctor" class="demo.Doctor">-->
 
-      <constructor-arg value="Electronic and Computer Engineering"></constructor-arg>
-   </bean>
+<!--      <constructor-arg value="Electronic and Computer Engineering"></constructor-arg>-->
+<!--   </bean>-->
 
-   <bean id="nurse" class="demo.Nurse"></bean>
+<!--   <bean id="nurse" class="demo.Nurse"></bean>-->
 
 </beans>

@@ -120,3 +120,18 @@ We can as well inject the properties of a class to a Bean.
   <constructor-arg value="Electronic and Computer Engineering"></constructor-arg>
 </bean>
 ```
+
+**METHOD TWO**
+
+```yaml
+
+Annotation based dependeny injection.
+
+It is a much shorter method.
+
+i annotate my class with @component.
+
+After i annotate my class, i specify my base package in my spring.xml.
+
+
+```

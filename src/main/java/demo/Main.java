@@ -9,9 +9,9 @@ public class Main {
         //providing my bean factory through the application context
         ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
 
-        Doctor staff = context.getBean(Doctor.class);
+        Staff staff = context.getBean(Nurse.class);
         staff.assist();
-        System.out.println(staff.getQualification());
+
 
     }
 }
