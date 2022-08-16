@@ -123,6 +123,8 @@ We can as well inject the properties of a class to a Bean.
 
 **METHOD TWO**
 
+**Annotation based dependeny Injection**
+
 ```yaml
 
 Annotation based dependeny injection.
@@ -133,5 +135,54 @@ i annotate my class with @component.
 
 After i annotate my class, i specify my base package in my spring.xml.
 
+
+```
+
+**Method three**
+
+**Java Configuration**
+
+```yaml
+
+remember there is what we call context in Java,and it is where all the dependencies are injected.
+
+  package demo;
+
+  import org.springframework.context.annotation.ComponentScan;
+  import org.springframework.context.annotation.Configuration;
+
+
+  @Configuration
+  @ComponentScan(basePackages = "demo")
+  public class BeanConfig {
+
+}
+
+both annotations borrow from the context.annotation....
+compoonent scan refers to the package i want to scan or point to.
+
+
+This method does not use xml in any way
+
+it does not use ClassPathXmlApplicationContext("spring.xml") but uses AnnotationConfigApplicationContext(BeanConfig.class);
+  
+It depends upon having the @component annotation in your classes as well.
+
+i can as well use the long method incase i do not want to use component scan.
+
+component scan is advantageous since i do not have to specify everything bean by bean.
+
+I can as well choose to anotatate my beans.
+
+
+  @Configuration
+  public class BeanConfig {
+
+  @Bean
+  public Doctor doctor(){
+  return new Doctor();
+  }
+
+}
 
 ```
