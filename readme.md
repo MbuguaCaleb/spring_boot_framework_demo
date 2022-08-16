@@ -185,4 +185,12 @@ I can as well choose to anotatate my beans.
 
 }
 
+i can choose to be using component scan or bean.....
+
+
+Beans is a much longer approach.
+
+Whenever i am using component scan i can use @Component.
+
+
 ```
