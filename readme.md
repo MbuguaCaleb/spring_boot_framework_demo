@@ -194,3 +194,43 @@ Whenever i am using component scan i can use @Component.
 
 
 ```
+
+**Spring Bean Scope**
+```yaml
+
+1.Singleton
+
+For every single class,there is only one single Object Available.
+
+spring creates one object for the entire application.
+
+It is the default spring behaviour.
+
+2.Prototype.
+
+You will get a different object everytime you request an Object from the container.
+
+When i want to change scope from singleton to prototype, we change scopeName
+3.Request.
+
+4.Session.
+
+5.Global Session.
+
+```
+
+
+**BeanLife Cycle**
+```yaml
+
+The lifecycle behaviour of a bean i.e how it is called can be mofied..
+
+
+eg before it is implemented...
+
+They are methods called before an object is created.
+
+Rememmber life cycle methods are very important when we are dealing with components.
+
+
+```
